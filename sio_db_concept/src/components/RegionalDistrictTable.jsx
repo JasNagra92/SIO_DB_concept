@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import styles from "../styles/Region.module.css";
 
@@ -19,20 +17,22 @@ export default function RegionalDistrictTable() {
 
   return (
     <table>
-      <tr>
-        <th>Regional District</th>
-        <th>Most Recent Update</th>
-        <th>URL</th>
-      </tr>
-      {testData.map((region, index) => (
-        <tr className={styles.regionrow} key={index}>
-          <td>{region.name}</td>
-          <td>{region.Date}</td>
-          <td>
-            <a href={region.URL}>Link</a>
-          </td>
+      <tbody>
+        <tr>
+          <th>Regional District</th>
+          <th>Most Recent Update</th>
+          <th>URL</th>
         </tr>
-      ))}
+        {testData.map((region, index) => (
+          <tr className={styles.regionrow} key={index}>
+            <td>{region.name}</td>
+            <td>{region.Date}</td>
+            <td>
+              <a href={region.URL}>Link</a>
+            </td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 
 export default function WildfireTable() {
@@ -27,18 +25,22 @@ export default function WildfireTable() {
 
   return (
     <table>
-      <tr>
-        <th>Wildfire Name</th>
-        <th>Hectares</th>
-        <th>Current Status</th>
-      </tr>
-      {testData.map((fire, index) => (
-        <tr key={index} className={getStatusClass(fire.status)}>
-          <td>{fire.name}</td>
-          <td>{fire.hectares}</td>
-          <td>{fire.status}</td>
+      <thead>
+        <tr>
+          <th>Wildfire Name</th>
+          <th>Hectares</th>
+          <th>Current Status</th>
         </tr>
-      ))}
+      </thead>
+      <tbody>
+        {testData.map((fire, index) => (
+          <tr key={index} className={getStatusClass(fire.status)}>
+            <td>{fire.name}</td>
+            <td>{fire.hectares}</td>
+            <td>{fire.status}</td>
+          </tr>
+        ))}
+      </tbody>
     </table>
   );
 }

@@ -1,0 +1,43 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Table header styles */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+/* Table row styles */
+tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table cell styles */
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+/* Highlighted row styles (for selected rows, if needed) */
+.selected-row {
+  background-color: #ffc107;
+}
+
+.row-bg-held {
+  background-color: #27ae60; /* Green background color for "held" status */
+  color: white; /* Text color */
+}
+
+.row-bg-out-of-control {
+  background-color: #f39c12; /* Light orange background color for "out of control" status */
+  color: white; /* Text color */
+} 
+
+body{
+  background-color: lightgray;
+}
