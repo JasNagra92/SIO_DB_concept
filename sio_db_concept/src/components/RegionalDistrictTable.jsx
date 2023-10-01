@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../styles/Region.module.css";
 
 export default function RegionalDistrictTable() {
   const testData = [
@@ -24,7 +23,7 @@ export default function RegionalDistrictTable() {
           <th>URL</th>
         </tr>
         {testData.map((region, index) => (
-          <tr className={styles.regionrow} key={index}>
+          <tr key={index}>
             <td>{region.name}</td>
             <td>{region.Date}</td>
             <td>

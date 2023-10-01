@@ -34,7 +34,7 @@ export default function WildfireTable() {
       </thead>
       <tbody>
         {testData.map((fire, index) => (
-          <tr key={index} className={getStatusClass(fire.status)}>
+          <tr key={index}>
             <td>{fire.name}</td>
             <td>{fire.hectares}</td>
             <td>{fire.status}</td>
