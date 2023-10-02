@@ -47,13 +47,16 @@ export default function DriveBCTable() {
   };
 
   return (
-    <div className="drop-shadow-lg">
+    <div>
       <div className="flex justify-center pb-3">
-        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white">
+        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white drop-shadow-lg">
           Drive BC Events
         </h1>
       </div>
-      <table className="table-auto overflow-y-auto bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden">
+      <table
+        className="table-auto w-full
+       bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden"
+      >
         <thead>
           <tr>
             <th className="border border-slate-300">Severity</th>

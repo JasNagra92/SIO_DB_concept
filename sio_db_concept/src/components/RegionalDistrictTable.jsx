@@ -15,16 +15,14 @@ export default function RegionalDistrictTable() {
   ];
 
   return (
-    <div className="drop-shadow-lg">
+    <div className="flex flex-col justify-center ">
       <div className="flex justify-center pb-3">
-        <h1>
-          <span className="text-lg bg-indigo-400 rounded-md p-2 text-white">
-            Regional Districts
-          </span>
+        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white drop-shadow-lg">
+          Regional Districts
         </h1>
       </div>
       <table
-        className="table-auto w-full
+        className="table-fixed
        bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden"
       >
         <tbody>

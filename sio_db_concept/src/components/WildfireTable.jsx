@@ -24,9 +24,9 @@ export default function WildfireTable() {
   };
 
   return (
-    <div className="drop-shadow-lg">
+    <div>
       <div className="flex justify-center pb-3">
-        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white">
+        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white drop-shadow-lg">
           BCWS Wildfires
         </h1>
       </div>
