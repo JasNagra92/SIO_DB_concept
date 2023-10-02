@@ -5,44 +5,6 @@ import { Table } from "antd";
 export default function DriveBCTable() {
   let [driveBCData, setDriveBCData] = useState([]);
 
-  const dataSource = [
-    {
-      key: "1",
-      name: "Mike",
-      age: 32,
-      address: "10 Downing Street",
-    },
-    {
-      key: "2",
-      name: "John",
-      age: 42,
-      address: "10 Downing Street",
-    },
-  ];
-
-  const columns = [
-    {
-      title: "Severity",
-      dataIndex: "Severity",
-      key: "Severity",
-    },
-    {
-      title: "Route",
-      dataIndex: "Route",
-      key: "Route",
-    },
-    {
-      title: "Description",
-      dataIndex: "Description",
-      key: "Description",
-    },
-    {
-      title: "Last Updated",
-      dataIndex: "Last Updated",
-      key: "Last Updated",
-    },
-  ];
-
   const getDriveBCData = async () => {
     try {
       const response = await axios.get(
@@ -85,12 +47,40 @@ export default function DriveBCTable() {
   };
 
   return (
-    <div>
-      <Table
-        dataSource={driveBCData}
-        columns={columns}
-        pagination={{ pageSize: 5 }}
-      />
+    <div className="drop-shadow-lg">
+      <div className="flex justify-center pb-3">
+        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white">
+          Drive BC Events
+        </h1>
+      </div>
+      <table className="table-auto overflow-y-auto bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden">
+        <thead>
+          <tr>
+            <th className="border border-slate-300">Severity</th>
+            <th className="border border-slate-300">Route</th>
+            <th className="border border-slate-300">Description</th>
+            <th className="border border-slate-300">Last Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+          {driveBCData.map((item, index) => (
+            <tr key={index}>
+              <td className="border border-slate-300 text-center">
+                {item.Severity}
+              </td>
+              <td className="border border-slate-300 text-center">
+                {item.Route}
+              </td>
+              <td className="border border-slate-300 text-center">
+                {item.Description}
+              </td>
+              <td className="border border-slate-300 text-center">
+                {item["Last Updated"]}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }

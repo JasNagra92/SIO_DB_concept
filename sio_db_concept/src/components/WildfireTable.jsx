@@ -2,12 +2,12 @@ import React from "react";
 
 export default function WildfireTable() {
   const testData = [
-    { name: "tatuk Lake", hectares: "30,000", status: "out of control" },
-    { name: "beaver Lake", hectares: "30,000", status: "out of control" },
+    { name: "Tatuk Lake", hectares: "44,641", status: "Out of control" },
+    { name: "Great Beaver Lake", hectares: "48,396", status: "Out of control" },
     {
-      name: "McDouggal Creek",
-      hectares: "30,000",
-      status: "being held",
+      name: "Lucas Lake",
+      hectares: "34,853",
+      status: "Out of control",
     },
   ];
 
@@ -24,23 +24,36 @@ export default function WildfireTable() {
   };
 
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Wildfire Name</th>
-          <th>Hectares</th>
-          <th>Current Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {testData.map((fire, index) => (
-          <tr key={index}>
-            <td>{fire.name}</td>
-            <td>{fire.hectares}</td>
-            <td>{fire.status}</td>
+    <div className="drop-shadow-lg">
+      <div className="flex justify-center pb-3">
+        <h1 className="text-lg bg-indigo-400 rounded-md p-2 text-white">
+          BCWS Wildfires
+        </h1>
+      </div>
+      <table className="table-auto w-full bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden">
+        <thead>
+          <tr>
+            <th className="border border-slate-300">Wildfire Name</th>
+            <th className="border border-slate-300">Hectares</th>
+            <th className="border border-slate-300">Current Status</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {testData.map((fire, index) => (
+            <tr key={index}>
+              <td className="border border-slate-300 text-center">
+                {fire.name}
+              </td>
+              <td className="border border-slate-300 text-center">
+                {fire.hectares}
+              </td>
+              <td className="border border-slate-300 text-center">
+                {fire.status}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

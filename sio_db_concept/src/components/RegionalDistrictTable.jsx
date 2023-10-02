@@ -15,23 +15,39 @@ export default function RegionalDistrictTable() {
   ];
 
   return (
-    <table>
-      <tbody>
-        <tr>
-          <th>Regional District</th>
-          <th>Most Recent Update</th>
-          <th>URL</th>
-        </tr>
-        {testData.map((region, index) => (
-          <tr key={index}>
-            <td>{region.name}</td>
-            <td>{region.Date}</td>
-            <td>
-              <a href={region.URL}>Link</a>
-            </td>
+    <div className="drop-shadow-lg">
+      <div className="flex justify-center pb-3">
+        <h1>
+          <span className="text-lg bg-indigo-400 rounded-md p-2 text-white">
+            Regional Districts
+          </span>
+        </h1>
+      </div>
+      <table
+        className="table-auto w-full
+       bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden"
+      >
+        <tbody>
+          <tr>
+            <th className="border border-slate-300">Regional District</th>
+            <th className="border border-slate-300">Most Recent Update</th>
+            <th className="border border-slate-300">URL</th>
           </tr>
-        ))}
-      </tbody>
-    </table>
+          {testData.map((region, index) => (
+            <tr key={index}>
+              <td className="border border-slate-300 text-center">
+                {region.name}
+              </td>
+              <td className="border border-slate-300 text-center">
+                {region.Date}
+              </td>
+              <td className="border border-slate-300 text-center">
+                <a href={region.URL}>Link</a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
