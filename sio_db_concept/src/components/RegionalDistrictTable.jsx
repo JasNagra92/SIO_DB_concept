@@ -22,7 +22,7 @@ export default function RegionalDistrictTable() {
         </h1>
       </div>
       <table
-        className="table-fixed
+        className="table-fixed 
        bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden"
       >
         <tbody>
