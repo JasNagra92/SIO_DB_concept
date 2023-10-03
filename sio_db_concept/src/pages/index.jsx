@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Sidebar from "../components/Sidebar";
 import { useEffect, useState } from "react";
+import Layout from "@/components/layout";
 
 const DashboardPage = dynamic(() => import("../components/DashboardPage"), {
   ssr: false,
@@ -23,11 +24,10 @@ export default function Home() {
   };
 
   return (
-    <main className="flex">
-      <Sidebar toggleTable={toggleTable} />
+    <Layout toggleTable={toggleTable} displayedTables={displayedTables}>
       {!DashboardPage.isFallback && (
         <DashboardPage displayedTables={displayedTables} />
       )}
-    </main>
+    </Layout>
   );
 }

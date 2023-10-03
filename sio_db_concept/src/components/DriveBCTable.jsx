@@ -59,25 +59,25 @@ export default function DriveBCTable() {
       >
         <thead>
           <tr>
-            <th className="border border-slate-300">Severity</th>
+            <th className="border border-slate-300 p-2">Severity</th>
             <th className="border border-slate-300">Route</th>
             <th className="border border-slate-300">Description</th>
-            <th className="border border-slate-300">Last Updated</th>
+            <th className="border border-slate-300 p-2">Last Updated</th>
           </tr>
         </thead>
         <tbody>
           {driveBCData.map((item, index) => (
             <tr key={index}>
-              <td className="border border-slate-300 text-center">
+              <td className="border border-slate-300 text-center p-2">
                 {item.Severity}
               </td>
-              <td className="border border-slate-300 text-center">
+              <td className="border border-slate-300 text-center p-2">
                 {item.Route}
               </td>
-              <td className="border border-slate-300 text-center">
+              <td className="border border-slate-300 text-center p-2">
                 {item.Description}
               </td>
-              <td className="border border-slate-300 text-center">
+              <td className="border border-slate-300 text-center p-2">
                 {item["Last Updated"]}
               </td>
             </tr>

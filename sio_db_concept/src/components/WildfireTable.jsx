@@ -2,12 +2,23 @@ import React from "react";
 
 export default function WildfireTable() {
   const testData = [
-    { name: "Tatuk Lake", hectares: "44,641", status: "Out of control" },
-    { name: "Great Beaver Lake", hectares: "48,396", status: "Out of control" },
+    {
+      name: "Tatuk Lake",
+      hectares: "44,641",
+      status: "Out of control",
+      LChange: "Sept 26, 2023",
+    },
+    {
+      name: "Great Beaver Lake",
+      hectares: "48,396",
+      status: "Out of control",
+      LChange: "Sept 23, 2023",
+    },
     {
       name: "Lucas Lake",
       hectares: "34,853",
       status: "Out of control",
+      LChange: "Sept 29, 2023",
     },
   ];
 
@@ -33,9 +44,10 @@ export default function WildfireTable() {
       <table className="table-auto w-full bg-white border-collapse border border-slate-400 drop-shadow-lg rounded-md overflow-hidden">
         <thead>
           <tr>
-            <th className="border border-slate-300">Wildfire Name</th>
+            <th className="border border-slate-300 p-2">Wildfire Name</th>
             <th className="border border-slate-300">Hectares</th>
             <th className="border border-slate-300">Current Status</th>
+            <th className="border border-slate-300">Last Changed</th>
           </tr>
         </thead>
         <tbody>
@@ -50,10 +62,18 @@ export default function WildfireTable() {
               <td className="border border-slate-300 text-center">
                 {fire.status}
               </td>
+              <td className="border border-slate-300 text-center">
+                {fire.LChange}
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
+      <div className="flex justify-end mt-2">
+        <button className="border rounded-md bg-green-300 p-1 text-black drop-shadow-lg">
+          Add Fire
+        </button>
+      </div>
     </div>
   );
 }
